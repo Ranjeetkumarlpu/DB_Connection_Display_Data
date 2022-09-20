@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<?php
+include("https://moveboldfoundation.org/Donate/donate1.php");
+$servername = "localhost:3306 ";
+$username = "moveboldfoundati";
+$password = "Asus@1998";
+$dbname = "moveboldfoundati_db";
+
+// Create connection
+$connection=new mysqli('localhost:3306','moveboldfoundati','Asus@1998','moveboldfoundati_db');
+// Check connection
+if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
+}
+
+$mysql = "SELECT amount, email, name ,address FROM donate";
+$result = $connection->query($mysql);
+
+if ($result->num_rows > 0) {
+    echo "<table><tr>
+    <th>Amount</th>
+    <th>Email</th>
+    <th>Name</th>
+    <th>Address</th>
+    </tr>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr>
+        <td>" . $row["amount"]. " </td>
+         <td>" . $row["email"]. " </td>
+          <td>" . $row["name"]. " </td>
+           <td>" . $row["address"]. " </td>
+        </tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+?>
+
+</body>
+</html>
+</html>
