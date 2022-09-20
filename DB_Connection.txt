@@ -9,7 +9,7 @@
    </head>
 <body>
     <?php
-    $connection=mysqli_connect('localhost:3306','moveboldfoundati','Asus@1998','moveboldfoundati_db');
+    $connection=mysqli_connect('localhost:3306','user name','password','Database name');
     if(isset($_POST['send'])){
         $amount=$_POST['amount'];
         $email=$_POST['email'];
