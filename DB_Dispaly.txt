@@ -17,7 +17,7 @@ $password = "Asus@1998";
 $dbname = "moveboldfoundati_db";
 
 // Create connection
-$connection=new mysqli('localhost:3306','moveboldfoundati','Asus@1998','moveboldfoundati_db');
+$connection=new mysqli('localhost:3306','user name','password','Database name');
 // Check connection
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
