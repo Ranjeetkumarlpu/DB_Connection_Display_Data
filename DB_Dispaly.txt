@@ -12,9 +12,9 @@ table, th, td {
 <?php
 include("https://moveboldfoundation.org/Donate/donate1.php");
 $servername = "localhost:3306 ";
-$username = "moveboldfoundati";
-$password = "Asus@1998";
-$dbname = "moveboldfoundati_db";
+$username = "#";
+$password = "#";
+$dbname = "cvv_db";
 
 // Create connection
 $connection=new mysqli('localhost:3306','user name','password','Database name');
